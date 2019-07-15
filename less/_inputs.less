@@ -190,6 +190,12 @@
     }
   }
 
+  &.label-floating:not(.is-empty) {
+    .control-label {
+      color: @mdb-label-color-light;
+    }
+  }
+
   // hint to browser for optimization
   //    TODO: evaluate effectiveness - looking for community feedback
   &.label-floating label.control-label {
@@ -221,6 +227,15 @@
       .material-input:after {
         background-color: @brand-primary;
       }
+    }
+
+    select.form-control:not([multiple]) {
+      border-bottom: 1px solid @brand-primary;
+      // Add caret
+      background-image: linear-gradient(45deg, transparent 50%, @mdb-label-color-light 50%), linear-gradient(135deg, @mdb-label-color-light 50%, transparent 50%);
+      background-position: calc(~"100% - 20px") calc(~"1em + 2px"), calc(~"100% - 15px") calc(~"1em + 2px");
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
     }
 
     //.variations(~".is-focused label.control-label", color, @brand-primary); // focused label color variations
@@ -277,10 +292,20 @@
 
 
 select.form-control {
-
   border: 0;
   box-shadow: none;
   border-radius: 0;
+  min-width: 50px;
+
+  &:not([multiple]) {
+    border-bottom: 1px solid @mdb-input-underline-color;
+
+    // Add caret
+    background-image: linear-gradient(45deg, transparent 50%, @mdb-label-color-light 50%), linear-gradient(135deg, @mdb-label-color-light 50%, transparent 50%);
+    background-position: calc(~"100% - 20px") calc(~"1em + 2px"), calc(~"100% - 15px") calc(~"1em + 2px");
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+  }
 
   .form-group.is-focused & {
     box-shadow: none;

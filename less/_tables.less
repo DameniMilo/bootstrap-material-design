@@ -80,6 +80,19 @@ th {
   }
 }
 
+.table-no-border {
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border-top: none;
+      }
+    }
+  }
+}
 
 // Bordered version
 //
@@ -113,8 +126,13 @@ th {
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 .table-striped {
-  > tbody > tr:nth-of-type(odd) {
-    background-color: @table-bg-accent;
+  > tbody {
+    > tr:nth-of-type(odd) {
+      background-color: @table-bg;
+    }
+    > tr:nth-of-type(even) {
+      background-color: @table-bg-accent;
+    }
   }
 }
 

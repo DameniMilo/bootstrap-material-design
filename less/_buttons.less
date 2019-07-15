@@ -144,6 +144,18 @@
       }
     }
 
+    &.btn-fab-xs,
+    .btn-group-sm & {
+      height: @mdb-btn-fab-size-xs;
+      min-width: @mdb-btn-fab-size-xs;
+      width: @mdb-btn-fab-size-xs;
+
+      &.material-icons {
+        top: (@mdb-btn-icon-size-xs - @mdb-btn-fab-font-size) / 2;
+        left: (@mdb-btn-icon-size-xs - @mdb-btn-fab-font-size) / 2;
+      }
+    }
+
     i.material-icons {
       position: absolute;
       top: 50%;
@@ -195,6 +207,7 @@
 
     // flat buttons lose transparency
     background: transparent;
+    pointer-events: none;
 
     // no box-shadow on raised - need specificity
     &.btn-raised,
