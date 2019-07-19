@@ -5,6 +5,14 @@
 [![Bower version](https://badge.fury.io/bo/bootstrap-material-design.svg)](https://github.com/FezVrasta/bootstrap-material-design)
 
 
+## JAHIA
+How to use this to regenerate css:
+- install grunt globally
+- run `npm install bootstrap-material-design`
+- modify the less in the less folder
+- then run `grunt dist-less`
+- and get your css in the dist folder
+
 
 ## About
 Material Design for Bootstrap is a Bootstrap V3 compatible theme; it is an easy way to use the new [Material Design guidelines by Google](https://material.google.com/) in your Bootstrap 3 based application.
